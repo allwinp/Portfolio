@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
   return (
-    <h2>"wanker"</h2>
+    <h2>"Portfolio test"</h2>
   );
 }
 
