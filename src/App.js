@@ -93,7 +93,9 @@ export default class App extends Component {
         <Route exact path="/contact">
           <Contact />
         </Route>
-
+        <Route exact path="/homer">
+          <Homer />
+        </Route>
       </div>
       </Switch>
     )
