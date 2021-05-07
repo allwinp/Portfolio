@@ -4,7 +4,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  HashRouter
 } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './components/Navbar';
@@ -32,6 +33,7 @@ export default class App extends Component {
 
     return (
       <Switch>
+      <HashRouter >
       <div
         style={{
           height: '100vh'
@@ -95,6 +97,7 @@ export default class App extends Component {
         </Route>
 
       </div>
+      </HashRouter>
       </Switch>
     )
   }
