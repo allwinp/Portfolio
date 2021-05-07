@@ -35,12 +35,20 @@
   
 }
 
+.homer {
+  width: 100%;
+  height: auto;
+}
+
 /*-------- MENU - LINKS ---------*/
 
+.nav-link {
+  border-top: .1875rem solid var(--bs-primarydark) !important;
+
+}
 
 nav a.nav-link {
-  font-size: large;
-  cursor: pointer;
+
 }
 
 .navbar-nav > li > a {
@@ -48,16 +56,12 @@ nav a.nav-link {
   margin-right: 3rem;
   margin-left: 3rem;
   color: var(--bs-white) !important;
-  border-top: .1875rem solid var(--bs-primarydark);
 }
 
-.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus {
-  border-top: .1875rem solid var(--bs-galaxypurple) !important;
-} 
 
 .navbar-nav > li > a:hover {
   color: var(--bs-galaxypurple) !important;
-  border-top: .1875rem solid var(--bs-galaxypurple) !important;
+
 }
 
 .navbar-brand {

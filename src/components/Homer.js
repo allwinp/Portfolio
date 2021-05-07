@@ -1,9 +1,10 @@
-import React from 'react'
-import HomerStars from '../homerstars.jpg'
+import React from 'react';
+import HomerStars from '../homerstars.jpg';
+import { AnimateOnChange } from 'react-animation';
 
 const Homer = () => {
     return (
-        <img src={HomerStars} alt="homer..."></img>
+        <img className="homer" src={HomerStars} alt="homer..."></img>
     )
 }
 
