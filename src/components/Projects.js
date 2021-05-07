@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Header = () => {
+const Projects = () => {
     return (
      <div className="header-wrapper">
          <div className="main-info">
-                 Hello
+                 Projects go here
          </div>
      </div>
     )
 }
 
-export default Header
+export default Projects

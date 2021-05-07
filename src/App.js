@@ -1,20 +1,22 @@
 import './App.css';
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './components/Navbar';
 import Homer from './components/Homer';
 import Header from './components/Header';
-import FluidAnimation from 'react-fluid-animation'
-
-const defaultConfig = {
-  textureDownsample: 1,
-  densityDissipation: 0.98,
-  velocityDissipation: 0.99,
-  pressureDissipation: 0.8,
-  pressureIterations: 25,
-  curl: 30,
-  splatRadius: 0.005,
-}
+import Projects from './components/Projects';
+import Services from './components/Services';
+import Contact from './components/Contact';
+import FluidAnimation from 'react-fluid-animation';
+import defaultConfig from './components/FluidAnimationdefaultConfig';
+import Typing from 'react-typing-animation';
+import FluidAnimationStrings from './components/FluidAnimationTextStrings'
 
 export default class App extends Component {
   state = {
@@ -29,18 +31,20 @@ export default class App extends Component {
     } = this.state
 
     return (
+      <Switch>
       <div
         style={{
           height: '100vh'
         }}
       >
         <Navbar />
+        <Route exact path="/">
         <FluidAnimation
           config={config}
           animationRef={this._animationRef}
         />
 
-        <div
+        <div className="FluidAnimationText"
           style={{
             position: 'absolute',
             zIndex: 1,
@@ -64,10 +68,34 @@ export default class App extends Component {
               textShadow: '2px 2px 8px rgba(0, 0, 0, 0.5)',
             }}
           >
-            Allwin Philip
+            <Typing speed={10} loop="true">
+              <span>{FluidAnimationStrings[0]}</span>
+              <Typing.Backspace delay={1000} count={FluidAnimationStrings[0].length + 1} />
+              <span>{FluidAnimationStrings[1]}</span>
+              <Typing.Backspace delay={1000} count={FluidAnimationStrings[1].length + 1} />
+              <span>{FluidAnimationStrings[2]}</span>
+              <Typing.Backspace delay={1000} count={FluidAnimationStrings[2].length + 1} />
+              <span>{FluidAnimationStrings[3]}</span>
+              <Typing.Backspace delay={1000} count={FluidAnimationStrings[3].length + 1} />
+            </Typing>
           </h1>
         </div>
+        </Route>
+        <Route exact path="/about">
+          <Header />
+        </Route>
+        <Route exact path="/projects">
+          <Projects />
+        </Route>
+        <Route exact path="/services">
+          <Services />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
+
       </div>
+      </Switch>
     )
   }
 
