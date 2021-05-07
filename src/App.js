@@ -12,11 +12,13 @@ import Homer from './components/Homer';
 import Header from './components/Header';
 import Projects from './components/Projects';
 import Services from './components/Services';
-import Contact from './components/Contact';
+import ContactForm from './components/ContactForm';
 import FluidAnimation from 'react-fluid-animation';
 import defaultConfig from './components/FluidAnimationdefaultConfig';
 import Typing from 'react-typing-animation';
 import FluidAnimationStrings from './components/FluidAnimationTextStrings'
+import LePetitPrinceBoyAndFox from './components/LePetitPrinceAndFox';
+import PrinceMoon from './components/Littleprince';
 
 export default class App extends Component {
   state = {
@@ -82,16 +84,16 @@ export default class App extends Component {
         </div>
         </Route>
         <Route exact path="/about">
-          <Header />
+          <Homer />
         </Route>
         <Route exact path="/projects">
-          <Projects />
+          <LePetitPrinceBoyAndFox />
         </Route>
         <Route exact path="/services">
-          <Services />
+          <PrinceMoon />
         </Route>
         <Route exact path="/contact">
-          <Contact />
+          <ContactForm />
         </Route>
         <Route exact path="/homer">
           <Homer />
