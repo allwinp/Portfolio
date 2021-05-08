@@ -1,7 +1,7 @@
 const defaultConfig = {
     textureDownsample: 1,
-    densityDissipation: 0.98,
-    velocityDissipation: 0.99,
+    densityDissipation: .98,
+    velocityDissipation: .99,
     pressureDissipation: 0.8,
     pressureIterations: 25,
     curl: 30,
