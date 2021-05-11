@@ -36,17 +36,46 @@
   
 }
 
+.FluidAnimationText{
+  position: 'absolute';
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: '1em';
+  display: 'flex';
+  flex-direction: 'column';
+  justify-content: 'center';
+  align-items: 'center';
+  color: '#3832e2';
+  font-family: 'Verdana, "Helvetica Neue". sans-serif';
+  pointer-events: 'none'
+}
 .homer {
   width: 100%;
   height: 100%;
+  position: 'absolute';
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: '1em';
+  display: 'flex';
+  flex-direction: 'column';
+  justify-content: 'center';
+  align-items: 'center';
+  color: '#3832e2';
+  font-family: 'Verdana, "Helvetica Neue". sans-serif';
+  pointer-events: 'none'
 }
-
+.contact {
+  background-color:black;
+  width: 100%;
+  height: 100%;
+}
 /*-------- MENU - LINKS ---------*/
-
-.nav-link {
-  border-top: .1875rem solid var(--bs-primarydark) !important;
-
-}
 
 .navbar-nav > li > a {
   font-size: 1rem;
@@ -56,7 +85,7 @@
 }
 
 
-.navbar-nav > li > a:hover {
+.nav-link:hover {
   color: var(--bs-galaxypurple) !important;
 
 }
@@ -65,4 +94,12 @@
   max-width: 17.25rem;
   padding:0 !important;
   height:6rem !important;
+}
+
+.navbar {
+  background-color: transparent !important;
+}
+
+.navbar-custom {
+  background-color:black;
 }
